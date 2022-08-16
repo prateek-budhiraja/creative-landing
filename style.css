@@ -9,15 +9,12 @@
 body {
   color: var(--black);
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--white);
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
+  margin-bottom: 20px;
 }
 
 nav .logo img {
@@ -26,37 +23,14 @@ nav .logo img {
 
 .links {
   font-weight: 100;
-  display: flex;
+  display: none;
   gap: 2em;
   font-size: 1.2rem;
 }
 
-.links::before {
-  display: block;
-  position: relative;
-  content: "";
-  width: 350px;
-  height: 2px;
-  top: 12px;
-  background-color: var(--black);
-}
 
-.links span:first-child {
-  font-weight: 400;
-}
-
-
-.left img {
-  position: absolute;
-  left: -50px;
-  top: 0;
-  height: 100vh;
-  z-index: -1;
-}
-
-/* top section */
 .right .top .left h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -67,78 +41,62 @@ nav .logo img {
 }
 
 .right .top .left h1:nth-child(2) {
-  margin-top: -35px;
-  margin-left: 120px;
+  margin-top: -10px;
+  margin-left: 40px;
 }
-
 
 .right .top .right {
   display: flex;
   flex-direction: column;
-  gap: 3.5em;
+  gap: 1em;
   justify-content: center;
   width: 40px;
   position: absolute;
-  top: 100px;
-  right: 30px;
-
+  top: 40px;
+  right: 10px;
 }
 
 .right .top .right img {
-  height: 25px;
-}
-
-.right .middle {
-  float: right;
-  margin-right: 100px;
+  height: 18px;
 }
 
 .right .middle span {
-  font-size: 1.5rem;
-  margin: 0;
-  position: absolute;
-  top: 220px;
-  right: 300px;
-  width: 100px;
-  color: var(--gray)
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--gray);
 }
 
 .right .middle button {
-  font-size: 1.8rem;
-  padding: 12px 40px;
+  font-size: 1rem;
+  padding: 5px 10px;
   background-color: var(--black);
   color: var(--white);
-}
-
-
-/* Bottom section */
-
-
-#quote {
-  font-family: 'Lily Script One', cursive;
-  font-size: 5rem;
-  position: absolute;
-  bottom: 320px;
-  right: 620px;
+  border: 0;
+  display: block;
+  margin: 20px auto 40px auto;
 }
 
 .bottom .right img {
-  width: 500px;
-  position: absolute;
-  bottom: -70px;
-  right: 150px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.right {
-  width: 60%;
-  float: right;
+#quote {
+  padding: 10px;
+  font-family: 'Lily Script One', cursive;
+  font-size: 2rem;
+}
+
+.right>h4 {
+  margin-top: -20px;
+  padding: 10px;
 }
 
 
-/* bottom section */
 .bottom .left {
-  position: absolute;
-  bottom: 30px;
   margin-left: 20px;
 }
 
@@ -159,7 +117,7 @@ nav .logo img {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 10px;
   background-color: var(--gray);
   top: 4px;
 }
@@ -168,19 +126,209 @@ nav .logo img {
   background-color: var(--black);
 }
 
+.bottom {
+  position: relative;
+}
+
 .bottom .line {
   height: 100%;
   width: 2px;
   background-color: var(--gray);
   position: absolute;
-  top: 42px;
-  left: 8px;
+  top: 22px;
+  left: 28px;
 }
 
-.bottom .right h4 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  position: absolute;
-  right: 145px;
-  bottom: 260px;
+@media screen and (min-width: 1200px) {
+  body {
+    overflow: hidden;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .left img {
+    display: none;
+    position: absolute;
+    left: -50px;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  .links::before {
+    display: block;
+    position: relative;
+    content: "";
+    width: 350px;
+    height: 2px;
+    top: 12px;
+    background-color: var(--black);
+  }
+
+  .links span:first-child {
+    font-weight: 400;
+  }
+
+  /* top section */
+  .right .top .left h1 {
+    font-size: 6rem;
+  }
+
+  .right .top .left h1:nth-child(2) {
+    margin-top: -35px;
+    margin-left: 120px;
+  }
+
+  .right .top .right {
+    gap: 3.5em;
+    top: 100px;
+    right: 30px;
+  }
+
+  .right .top .right img {
+    height: 25px;
+  }
+
+  .right .middle {
+    float: right;
+    margin-right: 100px;
+  }
+
+  .right .middle span {
+    display: inline;
+    font-size: 1.5rem;
+    margin: 0;
+    position: absolute;
+    top: 220px;
+    right: 300px;
+    width: 100px;
+    color: var(--gray)
+  }
+
+  .right .middle button {
+    display: inline;
+    font-size: 1.8rem;
+    padding: 12px 40px;
+  }
+
+
+  /* Bottom section */
+
+
+  #quote {
+    font-family: 'Lily Script One', cursive;
+    font-size: 5rem;
+    position: absolute;
+    bottom: 320px;
+    right: 620px;
+  }
+
+  .bottom .right img {
+    width: 500px;
+    position: absolute;
+    bottom: -70px;
+    right: 150px;
+  }
+
+  .right {
+    width: 60%;
+    float: right;
+  }
+
+
+  /* bottom section */
+  .bottom .left {
+    position: absolute;
+    bottom: 30px;
+    margin-left: 20px;
+  }
+
+  .bottom .left h4 {
+    margin-bottom: 45px;
+    font-weight: 400;
+    color: var(--gray);
+  }
+
+  .bottom .left h4:first-child {
+    color: var(--black);
+  }
+
+  .bottom .left h4::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: var(--gray);
+    top: 4px;
+  }
+
+  .bottom .left h4:first-child:before {
+    background-color: var(--black);
+  }
+
+  .bottom .line {
+    height: 100%;
+    width: 2px;
+    background-color: var(--gray);
+    position: absolute;
+    top: 42px;
+    left: 8px;
+  }
+
+  .bottom .right h4 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    position: absolute;
+    right: 145px;
+    bottom: 260px;
+  }
+
+
+  @media screen and (max-width: 1260px) {
+    .left img {
+      position: absolute;
+      left: -250px;
+      top: 0;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    .bottom .left {
+      left: 350px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1170px) {
+  .left img {
+    display: none;
+  }
+
+  .bottom .left {
+    left: 0px;
+  }
+
+  .right {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .links::before {
+    display: none;
+  }
 }
