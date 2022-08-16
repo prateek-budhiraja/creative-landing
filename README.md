@@ -4,7 +4,8 @@
 
 <br/>
 
-![mobile-responsive](https://img.shields.io/badge/Mobile%20Responsive-No-red)
+![mobile-responsive](https://img.shields.io/badge/Mobile%20Responsive-Yes-green)
+![tab-responsive](https://img.shields.io/badge/Tab%20Responsive-No-red)
 [![Deployed](https://img.shields.io/badge/Deployed-Yes-green)](https://creative-landing.vercel.app/)
 ![Time](https://img.shields.io/badge/Time%20Taken-2.5hrs-green)
 
